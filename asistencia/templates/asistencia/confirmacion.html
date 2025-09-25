@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Confirmación - Registro de Asistencia{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card text-center">
+            <div class="card-body p-5">
+                <div class="mb-4">
+                    <div class="bg-success rounded-circle d-inline-flex align-items-center justify-content-center" 
+                         style="width: 80px; height: 80px;">
+                        <i class="fas fa-check text-white" style="font-size: 2rem;"></i>
+                    </div>
+                </div>
+                
+                <h2 class="text-success mb-3">¡Registro Exitoso!</h2>
+                
+                <p class="lead text-muted mb-4">
+                    Su registro de asistencia ha sido guardado correctamente en el sistema.
+                </p>
+                
+                <div class="d-grid gap-2">
+                    <a href="{% url 'asistencia:registro' %}" class="btn btn-primary">
+                        <i class="fas fa-plus me-2"></i>
+                        Registrar Nueva Asistencia
+                    </a>
+                    
+                    <a href="/solicitudes/" class="btn btn-outline-secondary">
+                        <i class="fas fa-file-alt me-2"></i>
+                        Crear Solicitud
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
